@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:paddingTop="3dp"
+    android:paddingRight="3dp"
+    android:layout_gravity="center"
+    android:paddingLeft="3dp"
+    android:paddingBottom="20dp"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ORDER OF THE MATRIX"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#422986" />
+
+    <NumberPicker
+        android:id="@+id/picker_rows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:divider="#f2f5f7"
+        android:background="#634586"
+        android:layout_alignLeft="@+id/title"
+        android:layout_marginTop="5dp" />
+
+    <NumberPicker
+        android:layout_marginTop="5dp"
+        android:id="@+id/picker_cols"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:background="#634586"
+        android:layout_alignRight="@+id/title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Note : Order of matrix is defined as the (no. of rows) x (no. of columns) "
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/textView2"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/next"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:textColor="#fff"
+        android:background="@drawable/rounded_corners_green"
+        android:textSize="15sp"
+        android:layout_below="@+id/picker_rows"
+        android:layout_marginTop="40dp"
+        android:layout_alignRight="@+id/picker_rows" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:background="@drawable/button1"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_alignLeft="@+id/picker_cols"
+        android:layout_alignBottom="@+id/cancel"
+        android:layout_toRightOf="@+id/cancel"
+        android:layout_alignTop="@+id/cancel" />
+
+
+
+</RelativeLayout>

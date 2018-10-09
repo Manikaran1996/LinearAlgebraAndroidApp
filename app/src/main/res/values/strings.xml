@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Linear Algebra</string>
+    <string name="prev"><![CDATA[<]]></string>
+    <array name="topics">
+        <item>Matrix</item>
+        <item>Types of Matrix</item>
+        <item>Matrix Multiplication</item>
+        <item>Determinant</item>
+        <item>Echleon Form of a Matrix</item>
+        <item>Inverse of a Matrix</item>
+        <item>Adjoint of a Matrix</item>
+        <item>Solving System of Linear Equations</item>
+        <item>Rank of a Matrix</item>
+        <item>Eigen value and Eigen Vector</item>
+    </array>
+    <array name="operations">
+        <item>Add matrices</item>
+        <item>Multiply matrices</item>
+        <item>Adjoint of a matrix</item>
+        <item>Inverse of a matrix</item>
+        <item>Determinant of matrix</item>
+        <item>Echleon Form of a matrix</item>
+        <item>Rank of a matrix</item>
+        <item>Eigen value of a matrix</item>
+        <item>Eigen vectors of a matrix </item>
+    </array>
+</resources>

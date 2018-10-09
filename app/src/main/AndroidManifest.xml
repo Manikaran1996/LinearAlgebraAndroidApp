@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.har_asha.linearalgebra">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Topics"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
+        <activity android:name=".Details"
+            android:parentActivityName=".Topics"/>
+        <activity android:name=".Order" />
+        <activity android:name=".MatrixInput"
+            android:parentActivityName=".OperationsList"/>
+        <activity android:name=".OperationsList"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Practice"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Question"
+            android:parentActivityName=".Practice"/>
+        <activity android:name=".Question2"
+            android:parentActivityName=".Practice"/>
+    </application>
+
+</manifest>

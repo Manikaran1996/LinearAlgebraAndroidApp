@@ -1,0 +1,85 @@
+<html><head><link rel='stylesheet' href='../jqmath-0.4.3.css'><script src='../jquery-1.4.3.min.js'></script><script src='../jqmath-etc-0.4.6.min.js' charset='utf-8'></script>
+<link rel='stylesheet' href='../questionStyle.css'></link>
+
+<script src="../functions.js"></script>
+</head>
+<body style="background-color:#efefef">
+	<h4 style="text-align:center">QUESTIONS</h4>
+
+	<div class="question">
+	<p class="ques"> Q1. If $ A = [\table 0,1,2;2,3,4;4,5,6]$ , $B = [\table 1,0,0;0,1,0;0,0,1]$, then, $ 3A-4B = $ </p>
+	<div class="optionPanel">
+		<p id="1A" onClick="right('A','1')"> A. $[\table -4,3,6;6,5,12;12,15,14]$ </p>
+		<p id="1B" onClick="wrong('B','1','A')"> B. $[\table 0,1,2;2,3,4;4,5,6]$ </p>
+		<p id="1C" onClick="wrong('C','1','A')"> C. $[\table -4,6,3;6,5,12;12,15,14]$ </p>
+		<p id="1D" onClick="wrong('D','1','A')"> D. $[\table -4,3,6;6,15,12;12,5,14]$ </p>
+	</div>
+</div>
+
+<p id="showAnsTag1" onclick="show('1')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans1" >
+		<p style="padding:5px;"><strong>Ans. </strong> $3A = [\table 0,3,6;6,9,12;12,15,18]$ <br> $4B = [\table 4,0,0;0,4,0;0,0,4]$ <br> $3A - 4B = [\table -4,3,6;6,5,12;12,15,14]$ </p>
+</div>
+
+<div class="question">
+	<p class="ques">Q2. If a matrix has 13 elements, then the  possible dimensions(order) it can have are </p>
+	<div class="optionPanel">
+		<p id="2A" onClick="right('A','2')"> A. 1 x 13 , 13 x 1 </p>
+		<p id="2B" onClick="wrong('B','2','A')"> B. 1 x 26 , 26 x 1 </p>
+		<p id="2C" onClick="wrong('C','2','A')"> C. 2 x 13 , 13 x 2 </p>
+		<p id="2D" onClick="wrong('D','2','A')"> D. None of these</p>
+	</div>
+</div>
+
+<p id="showAnsTag2" onclick="show('2')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans2" >  
+		<p style="padding:5px;"><strong>Ans. </strong> No. of elements in a matrix of order $ m \x n $ = m.n </p>
+</div>
+
+<div class="question">
+	<p class="ques">Q3. If A is any m x n matrix such that AB and BA are both defined, then, N is a matrix of type  </p>
+	<div class="optionPanel">
+		<p id="3A" onClick="wrong('A','3','B')"> A. m x n </p>
+		<p id="3B" onClick="right('B','3')"> B. n x m</p>
+		<p id="3C" onClick="wrong('C','3','B')"> C. m x m</p>
+		<p id="3D" onClick="wrong('D','3','B')"> D. n x n</p>
+	</div>
+</div>
+
+<p id="showAnsTag3" onclick="show('3')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans3" >
+		<p style="padding:5px;"><strong>Ans.</strong> AB is defined if no. of columns in A = no. of rows in B.<br>So, no. of rows in B should be <b>'n'</b>. <br>For BA to be defined, no. of cols in B = no. of rows in A.<br>So, no. of cols in B should be <b>'m'</b>. <br>Hence, B is a matrix of type <b>'n x m'</b>.</p>
+</div>
+
+<div class="question">
+	<p class="ques">Q4. If $A= [\table 1,-2,3;-4,2,5]$, $B= [\table 2,3;4,5;2,1]$, then  </p>
+	<div class="optionPanel">
+		<p id="4A" onClick="wrong('A','4','B')"> A. AB , BA exist and are equal.</p>
+		<p id="4B" onClick="right('B','4')"> B. AB , BA exist but not equal. </p>
+		<p id="4C" onClick="wrong('C','4','B')"> C. AB exists and BA does not exist. </p>
+		<p id="4D" onClick="wrong('D','4','B')"> D. AB does not exist and BA exists. </p>
+	</div>
+</div>
+
+<p id="showAnsTag4" onclick="show('4')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans4" >
+		<p style="padding:5px;"><strong>Ans. </strong> Order of A = 2 x 3.<br> Order of B = 3 x 2 <br>So, AB and BA both exist.<br> Order of AB = 2 x 2.<br> Order of BA = 3 x 3. <br> Hence,they can not be equal.</p>
+</div>
+
+<div class="question">
+
+	<p class="ques">Q5. The order of $[\table x,y,z]$ $[\table a,h,g;h,b,f;g,f,c]$ $[\table x;y;z]$ is </p>
+	<div class="optionPanel">
+		<p id="5A" onClick="wrong('A','5','C')"> A. 3 x 1</p>
+		<p id="5B" onClick="wrong('B','5','C')"> B. 1 x 3</p>
+		<p id="5C" onClick="right('C','5')"> C. 1 x 1</p>
+		<p id="5D" onClick="wrong('D','5','C')"> D. 3 x 3</p>
+	</div>
+</div>
+
+<p id="showAnsTag5" onclick="show('5')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans5" >
+		<p style="padding:5px;"><strong>Ans. </strong> Let $A=[\table x,y,z]$ <br>$B=[\table a,h,g;h,b,f;g,f,c]$ <br>$C=[\table x;y;z]$ <br> Order of A = 1 x 3 <br> Order of B = 3 x 3 <br> Order of C = 3 x 1 <br> Order of AB = 1 x 3 <br> Order of ABC = 1 x 1 </p>
+</div>
+
+</body>

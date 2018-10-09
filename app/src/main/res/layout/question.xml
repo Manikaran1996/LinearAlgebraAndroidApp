@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/toolbar1"
+        layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/questionFragment"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_below="@+id/webView"
+        android:id="@+id/ans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:hint="Answer"
+        android:inputType="number|text"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
+
+
+    <Button
+        android:visibility="gone"
+        android:layout_alignBaseline="@+id/ans"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/webView"
+        android:layout_marginRight="20dp"
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Submit"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/showAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Solution"
+        android:layout_below="@+id/submit"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#0034ef"
+        android:clickable="true"
+        />
+
+    <WebView
+        android:id="@+id/solutionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/showAns"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/prev"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:text="@string/prev"
+        android:visibility="gone"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:clickable="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:onClick="previous"
+        android:layout_alignParentLeft="true"/>
+
+    <View
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@+id/prev"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/next"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text=" > "
+        android:clickable="true"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:onClick="next"/>
+
+</RelativeLayout>

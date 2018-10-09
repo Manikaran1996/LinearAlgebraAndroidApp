@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test">
+        <item>Question Set 1</item>
+        <item>Question Set 2</item>
+        <item>Question Set 3</item>
+        <item>Question Set 4</item>
+        <item>Question Set 5</item>
+    </string-array>
+</resources>

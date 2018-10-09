@@ -1,0 +1,122 @@
+<html><head><link rel='stylesheet' href='../jqmath-0.4.3.css'><script src='../jquery-1.4.3.min.js'></script><script src='../jqmath-etc-0.4.6.min.js' charset='utf-8'></script>
+<link rel='stylesheet' href='../questionStyle.css'></link>
+
+<script>
+var s =[false,false,false,false,false];
+
+function disableClick(quest) {
+	document.getElementById(quest+'A').onclick=  null;
+	document.getElementById(quest+'B').onclick=  null;
+	document.getElementById(quest+'C').onclick=  null;
+	document.getElementById(quest+'D').onclick=  null;
+
+}
+function right(id , quest) {
+	document.getElementById(quest+id).style.backgroundColor = '#c8e6c9';
+	disableClick(quest);
+	document.getElementById('showAnsTag'+quest).style.display='block';	
+}
+
+function wrong(id,quest) {
+	document.getElementById(quest+id).style.backgroundColor = '#ffcdd2';	
+	disableClick(quest);
+	document.getElementById('showAnsTag'+quest).style.display='block';
+		
+}
+
+function show(quest) {
+	var q = parseInt(quest)-1;
+	s[q] = !s[q];
+
+	if(s[q]==true) {
+		document.getElementById('ans'+quest).style.display='block';
+		document.getElementById('showAnsTag'+quest).innerHTML="Hide Answer";
+	}
+	else {
+		document.getElementById('ans'+quest).style.display='none';
+		document.getElementById('showAnsTag'+quest).innerHTML="Show Answer";
+	}
+}
+</script>
+</head>
+<body style="background-color:#efefef">
+	<h4 style="text-align:center">QUESTIONS</h4>
+
+	<div class="question">
+	<p class="ques">Q1. If $[\table 1,x,1]$ $[\table 1,3,2;0,5,1;0,3,2]$ $[\table x;1;-2]$ = O , then, $x$ = </p>
+	<div class="optionPanel">
+		<p id="1A" onClick="wrong('A','1')"> A. $-1$ </p>
+		<p id="1B" onClick="wrong('B','1')"> B. $-1/2$</p>
+		<p id="1C" onClick="right('C','1')"> C. $1/2$</p>
+		<p id="1D" onClick="wrong('D','1')"> D. $1$</p>
+	</div>
+</div>
+
+<p id="showAnsTag1" onclick="show('1')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans1" >
+		<p style="padding:5px;"><strong>Ans. </strong> $[\table 1,x,1]$ $[\table 1,3,2;0,5,1;0,3,2]$ $[\table x;1;-2]$ = O <br>$[\table 1+x.0+1.0,3.1+5.x+3.1,2.1+x.1+2.1]$ $[\table x;1;-2]$ = O <br> $[\table 1,5x+6,x+4]$ $[\table x;1;-2]$ = O <br> $[\table x+5x+6-2x-8]$ = $[\table 0]$ <br> $[\table 4x-2]$ = $[\table 0]$ <br> $x=1/2$</p>
+</div>
+
+<div class="question">
+	<p class="ques">Q2. If $A= [\table 3,1;-1,2]$, then $A^2 = $ </p>
+	<div class="optionPanel">
+		<p id="2A" onClick="wrong('A','2')"> A. $[\table 8,-5;-5,3]$ </p>
+		<p id="2B" onClick="wrong('B','2')"> B. $[\table 8,-5;5,3]$ </p>
+		<p id="2C" onClick="wrong('C','2')"> C. $[\table 8,-5;-5,-3]$</p>
+		<p id="2D" onClick="right('D','2')"> D. $[\table 8,5;-5,3]$</p>
+	</div>
+</div>
+
+<p id="showAnsTag2" onclick="show('2')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans2" >  
+		<p style="padding:5px;"><strong>Ans. </strong> $A^2 = A.A $ = $[\table 3,1;-1,2]$ $[\table 3,1;-1,2]$ <br> = $[\table 3.3+1.(-1),3.1+1.2;-1.3+2.(-1);-1.1+2.2]$  <br> = $[\table 9-1,3+2;-3-2,-1+4]$ <br> =  $[\table 8,5;-5,3]$</p>
+</div>
+
+<div class="question">
+	<p class="ques">Q3. If $A= [\table 0,-1,-4;1,0,7;4,-7,0]$, then, $A^T = $  </p>
+	<div class="optionPanel">
+		<p id="3A" onClick="wrong('A','3')"> A. O</p>
+		<p id="3B" onClick="wrong('B','3')"> B. I</p>
+		<p id="3C" onClick="wrong('C','3')"> C. A</p>
+		<p id="3D" onClick="right('D','3')"> D. -A</p>
+	</div>
+</div>
+
+<p id="showAnsTag3" onclick="show('3')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans3" >
+		<p style="padding:5px;"><strong>Ans.</strong> As A is a skew-symmetric matrix. So, $A^T = - A$. </p>
+</div>
+
+<div class="question">
+	<p class="ques">Q4. If $A= [\table \cos\x,\sin\x;-\sin\x,\cos\x]$, then $A.A^T = $ </p>
+	<div class="optionPanel">
+		<p id="4A" onClick="wrong('A','4')"> A. O</p>
+		<p id="4B" onClick="right('B','4')"> B. I</p>
+		<p id="4C" onClick="wrong('C','4')"> C. A</p>
+		<p id="4D" onClick="wrong('D','4')"> D. -A</p>
+	</div>
+</div>
+
+<p id="showAnsTag4" onclick="show('4')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans4" >
+		<p style="padding:5px;"><strong>Ans. </strong> $[\table \cos\x,sin\x;-\sin\x,\cos\x]$ $[\table \cos\x,sin\x;-\sin\x,\cos\x]^T$ <br> = $[\table \cos\x,sin\x;-\sin\x,\cos\x]$ $[\table \cos\x,\-\sin\x;\sin\x,\cos\x]$ <br> = $[\table \cos^2\x\+\sin^2\x,\cos\x\(\-\sin\x)\+\sin\x\cos\x;-\sin\x\cos\x\+\cos\x\sin\x,\sin^2\x\+\cos^2\x]$ <br> = $[\table 1,0;0,1]$ <br> = I
+</p>
+</div>
+
+<div class="question">
+
+	<p class="ques">Q5.   </p>
+	<div class="optionPanel">
+		<p id="5A" onClick="right('A','5')"> A. </p>
+		<p id="5B" onClick="wrong('B','5')"> B. </p>
+		<p id="5C" onClick="wrong('C','5')"> C. </p>
+		<p id="5D" onClick="wrong('D','5')"> D. </p>
+	</div>
+</div>
+
+<p id="showAnsTag5" onclick="show('5')" style="background-color:#00000000;color:blue;text-align:right;text-decoration:underline;display:none;">Show Answer</p>
+<div class="solution" id="ans5" >
+		<p style="padding:5px;"><strong>Ans. </strong> </p>
+</div>
+
+</body>

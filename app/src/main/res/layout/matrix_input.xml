@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c0c0c0">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                apps:contentPaddingBottom="20dp"
+                apps:contentPaddingLeft="5dp"
+                apps:contentPaddingRight="5dp"
+                apps:cardBackgroundColor="#fff"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INPUT MATRIX "
+                        android:textColor="#C91818"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+                    <ImageButton
+                        android:id="@+id/remove1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/delete"
+                        android:padding="5dp"
+                        android:background="#0000"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#123"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/textView1"/>
+
+                    <GridLayout
+                        android:layout_below="@+id/textView1"
+                        android:layout_marginTop="25dp"
+                        android:foregroundGravity="center"
+                        android:id="@+id/container1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                    </GridLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/input2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                apps:contentPaddingBottom="20dp"
+                apps:contentPaddingLeft="5dp"
+                apps:contentPaddingRight="5dp"
+                apps:cardBackgroundColor="#fff"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/matrix2Header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INPUT MATRIX-2"
+                        android:textColor="#7a1bf7"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"/>
+
+                    <ImageButton
+                        android:id="@+id/remove2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/delete2"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:background="#0000"/>
+
+                    <View
+                        android:id="@+id/matrix2Line"
+                        android:visibility="gone"
+                        android:layout_below="@id/matrix2Header"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#123"/>
+
+                    <GridLayout
+                        android:visibility="gone"
+                        android:layout_below="@id/matrix2Line"
+                        android:layout_marginTop="20dp"
+                        android:foregroundGravity="center"
+                        android:id="@+id/container2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                    </GridLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </WebView>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+
+    </ScrollView>
+    <Button
+        android:id="@+id/compute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMPUTE"
+        android:textColor="#fff"
+        android:background="#326834"/>
+</LinearLayout>
