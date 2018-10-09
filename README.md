@@ -1,0 +1,1 @@
+This is an educational android app. I have added notes related to Linear algebra in html files which are rendered in webview. I am also working on improving the GUI for the calculator which supports the matrix operation. The app also supports the quizes. All the tutorials and quizzes are yet to be added.
